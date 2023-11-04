@@ -1,0 +1,456 @@
+Experiment 1
+1.	Write a C program to find BMI value.
+#include <stdio.h>
+
+int main()
+{
+    float w, h, bmi;
+    printf("BMI calculator\n");
+    scanf("%f %f", &w, &h);
+    bmi= h*h/w;
+    printf("The result is %f", bmi);
+    return 0; 
+
+}
+2.	Write a C program to swap two numbers. 
+#include<stdio.h>  
+ int main()    
+{    
+int a=10, b=20;      
+printf("Before swap a=%d b=%d",a,b);      
+a=a+b;//a=30 (10+20)    
+b=a-b;//b=10 (30-20)    
+a=a-b;//a=20 (30-10)    
+printf("\nAfter swap a=%d b=%d",a,b);    
+return 0;  
+}   
+o	STEP 1: START
+o	STEP 2: ENTER x, y
+o	STEP 3: PRINT x, y
+o	STEP 4: x = x + y
+o	STEP 5: y= x - y
+o	STEP 6: x =x - y
+o	STEP 7: PRINT x, y
+o	STEP 8: END
+
+
+
+
+
+
+
+3.	Write a C program to find sum and average of five marks. 
+
+#include <stdio.h>
+int
+main ()
+{
+  int maths, physics, chemistry, biology, english;
+  float avg;
+
+  printf ("Enter Maths : ");
+  scanf ("%d", &maths);
+  printf ("Enter Physics : ");
+  scanf ("%d", &physics);
+  printf ("Enter Chemistry : ");
+  scanf ("%d", &chemistry);
+  printf ("Enter Biology : ");
+  scanf ("%d", &biology);
+  printf ("Enter English : ");
+  scanf ("%d", &english);
+
+  avg = (float)(maths + physics + chemistry + biology + english) / 5;
+    printf("Average : %f\n", avg);
+  return 0;
+}
+
+
+
+
+
+
+
+
+4.	Write a C program to find area of circle. 
+#include <stdio.h>
+int main()
+{
+    float radius , area;
+    printf("Enter radius:\n");
+    scanf("%f" , & radius);
+    area= 3.14 *  radius *  radius;
+    printf("The area of the circle is %f", area);
+    return 0; 
+
+}
+5.	Write a C program to convert temperature from centigrade to Fahrenheit
+#include <stdio.h>
+
+int main()
+{
+    float celsius, fahrenheit;
+    
+    printf("Enter temperature in Degree Celsius: ");
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 9 / 5) + 32;
+    printf("%f fahrenheit", fahrenheit);
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 2
+1.	Write a C program to find quotient and remainder using arithmetic operators.
+#include <stdio.h>
+int main() {
+    int dividend, divisor, quotient, remainder;
+    printf("Enter dividend: ");
+    scanf("%d", &dividend);
+    printf("Enter divisor: ");
+    scanf("%d", &divisor);
+
+    // calculate the quotient
+    quotient = dividend / divisor;
+
+    // calculate the remainder
+    remainder = dividend % divisor;
+
+    printf("Quotient= %d\n", quotient);
+    printf("Remainder= %d", remainder);
+    return 0;
+}
+
+
+2.	Write a program to read a number from the user and remove the last digit and display the result. 
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c;
+    printf("enter a number: ");
+    scanf("%d", &a);
+    
+    c = a/10;
+    
+    printf("Number with last digit removed: %d\n" , c);
+
+    return 0;
+}
+
+3.	Write a C program to read pin code in 6 digits and display the last 3 digits. 
+
+
+
+
+4.	Read a character and display equivalent ASCII value.
+#include <stdio.h>
+
+int main()
+{
+    char a;
+    printf("Enter a character: ");
+    scanf("%c", &a);
+    
+    
+    printf("The ASICC value of %c is %d", a , a);
+
+    return 0;
+}
+5.	Read a number from the user and multiply the last digit and second last digit.
+#include <stdio.h>
+int main()
+{
+    int a, b, c;
+    printf("Enter a number: "); 
+    scanf("%d", &a);
+    
+    b = a % 10;
+    c = ((a%100)/10);
+
+    printf("Multiplying the last 2 digits of %d is %d", a, b*c);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiment 3
+
+1.	Write a program in C to read a number and find one’s complement. (bitwise operator)
+#include<stdio.h>
+
+int main()
+{
+    int a , bin = 0, rem = 0, place = 1;
+    printf("Enter a: ");
+    scanf("%d", &a);
+    
+    printf("\nBinary equivalent of %d: ", a);
+    while(a)
+    {
+        rem = a % 2;
+        a = a / 2;
+        bin = bin + (rem * place);
+        place = place * 10;
+    }
+    printf("%d\n", bin);
+    
+  printf("Bitwise complement of %d : %d", bin, ~bin);
+  return 0;
+}
+2.	Write a C program to find greatest of three numbers using ternary operator. 
+#include <stdio.h>
+int main()
+{
+    int A, B, C, largest;
+ 
+    printf("Enter three values:\n");
+    scanf("%d %d %d", &A, &B, &C);
+ 
+    largest = A > B ? (A > C ? A : C) : (B > C ? B : C);
+ 
+    printf("%d is the largest among the three values.", largest);
+ 
+    return 0;
+}
+
+
+
+
+
+
+
+
+3.	Display the size of various data types in C using size of operator
+#include <stdio.h>  
+int main()  
+{  
+    int x=89;    // variable declaration.  
+    printf("size of the variable x is %d", sizeof(x));  // Displaying the size of ?x? variable.  
+    printf("\nsize of the integer data type is %d",sizeof(int)); //Displaying the size of integer data type.  
+    printf("\nsize of the character data type is %d",sizeof(char)); //Displaying the size of character data type.  
+  
+    printf("\nsize of the floating data type is %d",sizeof(float)); //Displaying the size of floating data type.  
+return 0;  
+}  
+4.	Read a decimal number and display its equivalent octal and hexadecimal numbers.
+#include<stdio.h>   
+void main()     
+{     
+	int n = 33; 
+	printf("Decimal value = %d",n); 
+	printf("\nOctal value = %o",n); 
+	printf("\nHexadecimal value = %x",n); 
+}
+
+
+
+
+
+5.	Write a program to find perimeter of a circle and display it with 2 decimal places.
+// area of circle 
+#include <stdio.h>
+int main()
+{
+    float radius ,  circumference;
+    printf("Enter radius:\n");
+    scanf("%f" , & radius);
+    circumference= 2 * 3.14 * radius;
+    printf("The cirumference of the circle is %.2f", circumference);
+    return 0; 
+
+}
+
+
+
+Experiment 4
+4.1 Write a C program to check whether the given year is leap year or not.
+#include <stdio.h>
+int main() {
+   int year;
+   printf("Enter a year: ");
+   scanf("%d", &year);
+
+   // leap year if perfectly divisible by 400
+   if (year % 400 == 0) {
+      printf("%d is a leap year.", year);
+   }
+   // not a leap year if divisible by 100
+   // but not divisible by 400
+   else if (year % 100 == 0) {
+      printf("%d is not a leap year.", year);
+   }
+   // leap year if not divisible by 100
+   // but divisible by 4
+   else if (year % 4 == 0) {
+      printf("%d is a leap year.", year);
+   }
+   // all other years are not leap years
+   else {
+      printf("%d is not a leap year.", year);
+   }
+
+   return 0;
+}
+
+
+4.2 Write a program in C to check whether the given number is prime or not. 
+#include <stdio.h>
+int main()
+{
+    int i, num, temp = 0; 
+    // read input from user.
+    printf("Enter any numb to Check for Prime: ");
+    scanf("%d", &num);
+
+    // iterate up to n/2.
+    for (i = 2; i <= num / 2; i++)
+    {
+        // check if num is divisible by any number.
+        if (num % i == 0)
+        {
+            temp++;
+            break;
+        }
+    } 
+    // check for the value of temp and num. 
+    if (temp == 0 && num != 1)
+    {
+        printf("%d is a Prime number", num);
+    }
+    else
+    {
+        printf("%d is not a Prime number", num);
+    }
+    return 0;
+
+4.3 Write a program to check whether the number is palindrome or not.
+#include <stdio.h>
+int main() {
+    int n, n1, rev = 0, rem;
+    printf("Enter any number: ");
+    scanf("%d", &n);    
+    n1 = n;
+    //logic
+    while (n > 0){
+        rem = n % 10;
+        rev = rev * 10 + rem;
+        n = n / 10;
+    }
+    if (n1 == rev){
+        printf("Given number is a palindromic number"); 
+    }
+    else{
+        printf("Given number is not a palindromic number"); 
+    }    
+    return 0; 
+}
+
+
+
+
+
+
+
+
+
+4.4 Write a menu driven program to perform the following arithmetic operations using do…while statement and switch statement. 
+1.	Read the numbers 
+2.	Addition 
+3.	Subtraction 
+4.	Multiplication 
+5.	Division 
+Exit Enter your choice:
+#include <stdio.h>
+void main() {
+  int num1,num2,opt;
+  printf("Enter the first Integer: ");
+  scanf("%d",&num1);
+  printf("Enter the second Integer: ");
+  scanf("%d",&num2);
+  
+    printf("\nInput your option: \n");
+    printf("1- Read the values. \n2-Addition.\n3-Substraction.\n4-Multiplication.\n5-Division.\n6-Exit.\n");
+    scanf("%d",&opt);
+    switch(opt) {
+       case 1:
+        printf("The two values are  %d and %d",num1,num2);
+        break;
+        
+      case 2:
+        printf("The Addition of  %d and %d is: %d\n",num1,num2,num1+num2);
+        break;
+        
+      case 3:
+        printf("The Substraction of %d  and %d is: %d\n",num1,num2,num1-num2);
+        break;
+        
+      case 4:
+        printf("The Multiplication of %d  and %d is: %d\n",num1,num2,num1*num2);
+        break;  
+      
+      case 5:
+        if(num2==0) {
+          printf("The second integer is zero. Devide by zero.\n");
+        } else {
+          printf("The Division of %d  and %d is : %d\n",num1,num2,num1/num2);
+        }  
+        break;
+        
+      case 6: 
+        break; 
+        
+      default:
+        printf("Input correct option\n");
+        break; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+4.5 Write a C program to display the following pattern: 
+        *
+           * * * 
+        * * * * * 
+      * * * * * * * 
+   * * * * * * * * *
+ * * * * * * * * * * *
+
+#include <stdio.h>
+
+int main()
+{
+    printf("       *\n      ***\n     *****\n    *******\n   *********\n  *********** ");
+
+    return 0;
+}
